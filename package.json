@@ -12,5 +12,8 @@
   "license": "ISC",
   "dependencies": {
     "nuxt": "^2.14.12"
+  },
+  "devDependencies": {
+    "axios": "^0.21.1"
   }
 }
