@@ -1,12 +1,19 @@
 <template>
   <div>
+    <!--获取到路由中的id动态参数-->
     <h1>User page {{ $route.params.id }}</h1>
+    <!-- 获取路由中的query参数 -->
+    {{ $route.query.type }}
   </div>
 </template>
 
 <script>
 export default {
-  name: 'UserPage'
+  name: 'UserPage',
+  validate({ params }) {
+    // 必须是number类型
+    return /^\d+$/.test(params.id)
+  }
 }
 </script>
 
